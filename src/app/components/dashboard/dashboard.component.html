@@ -1,0 +1,302 @@
+<div class="flex w-full">
+    <div class="dashboard">
+
+        <!-- Stats Area -->
+        <div class="stat grid-container">
+            <div class="stat-item">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="flex items-center">
+                        <div class="stats-icon text-center mr-2 ">
+                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                        </div>
+                        <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
+                    </div>
+                    <p class="font-medium text text-2xl">08</p>
+                </div>
+                <div class="base-divider"></div>
+                <div class="stats-footer flex items-center justify-between">
+                    <img src="assets/icons/little-graph-green.png" alt="" srcset="">
+                    <p class="text-sm text-gray my-0 text-right"><span class="text-light-green">10+</span> more from last</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="flex items-center">
+                        <div class="stats-icon text-center mr-2 ">
+                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                        </div>
+                        <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
+                    </div>
+                    <p class="font-medium text text-2xl">08</p>
+                </div>
+                <div class="base-divider"></div>
+                <div class="stats-footer flex items-center justify-between">
+                    <img src="assets/icons/little-graph-orange.png" alt="" srcset="">
+                    <p class="text-sm text-gray my-0 text-right"><span class="text-light-green">10+</span> more from last</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="flex items-center">
+                        <div class="stats-icon text-center mr-2 ">
+                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                        </div>
+                        <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
+                    </div>
+                    <p class="font-medium text text-2xl">08</p>
+                </div>
+                <div class="base-divider"></div>
+                <div class="stats-footer flex items-center justify-between">
+                    <img src="assets/icons/little-graph-red.png" alt="" srcset="">
+                    <p class="text-sm text-gray my-0 text-right"><span class="text-light-green">10+</span> more from last</p>
+                </div>
+            </div>
+        </div>
+        <!-- Stats Area End -->
+
+        <!-- Line Chart Area -->
+        <div class="line-chart-card">
+            <div class="line-chart-header flex justify-between align-center m-b-6">
+                <h2 class="text-green font-medium text-2xl">Task Done</h2>
+                <div class="line-chart-filter flex">
+                    <button>Daily</button>
+                    <button>Weekly</button>
+                    <button class="Active">Monthly</button>
+                </div>
+            </div>
+            <div>
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [grid]="chartOptions.grid" [legend]="chartOptions.legend" [stroke]="chartOptions.stroke" [xaxis]="chartOptions.xaxis" style="width: 100%;"></apx-chart>
+            </div>
+
+        </div>
+        <!-- Line Chart Area End -->
+
+        <!-- Table Area -->
+        <div class="task-table-card">
+            <div class="task-table-header flex justify-between mb-4">
+                <p class="text-green">Task</p>
+                <div class="task-table-filter flex">
+                    <div class="Table-filter-dropdown relative">
+                        <button class="flex items-center">
+              <p class="mr-2 my-0">Last 7 days</p>
+              <svg style="color:#4ba8a8" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+                        <!-- <div class="Dropdown ">
+              <ul class="pl-0 my-0">
+                <li><input type="radio" id="option1" name="option1">
+                  <p>Last day</p>
+                </li>
+                <li><input type="radio" id="option2" name="option2">
+                  <p>Last 7 days</p>
+                </li>
+                <li><input type="radio" id="option3" name="option3">
+                  <p>Last 30 days</p>
+                </li>
+                <li><input type="radio" id="option4" name="option4">
+                  <p>Last quarter</p>
+                </li>
+                <li><input type="radio" id="option5" name="option5">
+                  <p>Last year</p>
+                </li>
+              </ul>
+            </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="Task-table text-left p-6">
+                <table class="w-full">
+                    <thead class="w-full">
+                        <th>Name Of Task</th>
+                        <th>Start Date</th>
+                        <th>End date</th>
+                        <th>Hours</th>
+                        <th>Progress</th>
+                        <th></th>
+                    </thead>
+
+                    <tbody>
+                        <tr class="text-sm font-medium" style="border-top: 1px solid #e7e8f0; margin: 4px 0;">
+                            <td class="forTableInner">User journey of the project</td>
+                            <td>2022-09-03</td>
+                            <td>2022-09-17</td>
+                            <td>30</td>
+                            <td>
+                                <p class="font-1 text-lighter-green m-y-0">60% Complete</p>
+                                <div class="Table-progress-bar">
+                                    <div class="Table-progress-bar-loaded"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="Action-dropdown relative">
+                                    <button>
+                    <svg style="color:#4ba8a8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
+                      </path>
+                    </svg>
+                  </button>
+                                    <!-- <div class="Dropdown ">
+                    <ul class="p-l-0 m-y-0">
+                      <li>Complete</li>
+                      <li>Edit</li>
+                      <li>Delete</li>
+                    </ul>
+                  </div> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="text-sm font-medium py-16" style="border-top: 1px solid #e7e8f0; margin: 4px 0;">
+                            <td class="forTableInner">Wireframing the project</td>
+                            <td>2022-09-03</td>
+                            <td>2022-09-23</td>
+                            <td>40</td>
+                            <td>
+                                <p class="font-1 text-lighter-green m-y-0">60% Complete</p>
+                                <div class="Table-progress-bar">
+                                    <div class="Table-progress-bar-loaded"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="Action-dropdown relative">
+                                    <button>
+                    <svg style="color:#4ba8a8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
+                      </path>
+                    </svg>
+                  </button>
+                                    <!-- <div class="Dropdown ">
+                    <ul class="p-l-0 m-y-0">
+                      <li>Complete</li>
+                      <li>Edit</li>
+                      <li>Delete</li>
+                    </ul>
+                  </div> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="text-sm font-medium" style="border-top: 1px solid #e7e8f0; margin: 4px 0;">
+                            <td>User interface design</td>
+                            <td>2022-09-03</td>
+                            <td>2022-09-23</td>
+                            <td>40</td>
+                            <td>
+                                <p class="font-1 text-lighter-green m-y-0">60% Complete</p>
+                                <div class="Table-progress-bar">
+                                    <div class="Table-progress-bar-loaded"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="Action-dropdown relative">
+                                    <button>
+                    <svg style="color:#4ba8a8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
+                      </path>
+                    </svg>
+                  </button>
+                                    <!-- <div class="Dropdown ">
+                    <ul class="p-l-0 m-y-0">
+                      <li>Complete</li>
+                      <li>Edit</li>
+                      <li>Delete</li>
+                    </ul>
+                  </div> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <!-- Table Area End -->
+    </div>
+    <div class="create-task-area bg-white">
+        <div class="main-title-area flex items-center justify-between mb-6">
+            <h3 class="text-green font-medium text-xl">Today's Schedule</h3>
+            <div class="Title-toggle flex justify-between">
+                <svg style="color:#4ba8a8" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="lighter mr-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="#000" stroke-linejoin="round" stroke-width="2"
+            d="M3 6.2c0-1.12 0-1.68.218-2.108a2 2 0 01.874-.874C4.52 3 5.08 3 6.2 3h.6c1.12 0 1.68 0 2.108.218a2 2 0 01.874.874C10 4.52 10 5.08 10 6.2v.6c0 1.12 0 1.68-.218 2.108a2 2 0 01-.874.874C8.48 10 7.92 10 6.8 10h-.6c-1.12 0-1.68 0-2.108-.218a2 2 0 01-.874-.874C3 8.48 3 7.92 3 6.8v-.6zM14 6.2c0-1.12 0-1.68.218-2.108a2 2 0 01.874-.874C15.52 3 16.08 3 17.2 3h.6c1.12 0 1.68 0 2.108.218a2 2 0 01.874.874C21 4.52 21 5.08 21 6.2v.6c0 1.12 0 1.68-.218 2.108a2 2 0 01-.874.874C19.48 10 18.92 10 17.8 10h-.6c-1.12 0-1.68 0-2.108-.218a2 2 0 01-.874-.874C14 8.48 14 7.92 14 6.8v-.6zM3 17.2c0-1.12 0-1.68.218-2.108a2 2 0 01.874-.874C4.52 14 5.08 14 6.2 14h.6c1.12 0 1.68 0 2.108.218a2 2 0 01.874.874C10 15.52 10 16.08 10 17.2v.6c0 1.12 0 1.68-.218 2.108a2 2 0 01-.874.874C8.48 21 7.92 21 6.8 21h-.6c-1.12 0-1.68 0-2.108-.218a2 2 0 01-.874-.874C3 19.48 3 18.92 3 17.8v-.6zM14 17.2c0-1.12 0-1.68.218-2.108a2 2 0 01.874-.874C15.52 14 16.08 14 17.2 14h.6c1.12 0 1.68 0 2.108.218a2 2 0 01.874.874C21 15.52 21 16.08 21 17.2v.6c0 1.12 0 1.68-.218 2.108a2 2 0 01-.874.874C19.48 21 18.92 21 17.8 21h-.6c-1.12 0-1.68 0-2.108-.218a2 2 0 01-.874-.874C14 19.48 14 18.92 14 17.8v-.6z">
+          </path>
+        </svg>
+                <svg style="color:#4ba8a8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="#000" stroke-width="2"
+            d="M2,5 L22,5 L22,22 L2,22 L2,5 Z M18,5 L18,1 M6,5 L6,1 M2,10 L22,10"></path>
+        </svg>
+            </div>
+        </div>
+        <div class="create-task-form">
+            <h3 class="text-green mb-5 font-medium text-xl">New Task</h3>
+            <div class="input-field mb-6 w-full">
+                <p class="Title text-sm font-medium mb-4">Task Title</p><input placeholder="Create new">
+            </div>
+            <div class="Emoji-list flex">
+                <svg class="w-6 h-6 mt-1" style="color:#4ba8a8" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+                <img class="w-4/5" src="assets/icons/emojis.png" alt="Emojis">
+                <svg class="w-6 h-6 mt-1" style="color:#4ba8a8" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+            </div>
+
+            <div class="base-divider"></div>
+            <div class="add-collaborators">
+                <p class="Title">Add Collaborators</p>
+                <div class="Collaborators-list flex">
+                    <div class="collaborators-list-item"></div>
+                    <button class="add-button"></button>
+                </div>
+
+            </div>
+            <div class="base-divider"></div>
+            <div class="input-date-picker w-full mb-6">
+                <p class="title">Time To Complete</p>
+                <input type="date">
+            </div>
+            <div class="input-date-picker w-full mb-6">
+                <p class="title">End Date</p><input type="date">
+            </div>
+            <div class="base-divider"></div>
+            <div class="input-field mb-6 w-full">
+                <p class="title">Hours Budgeted</p><input placeholder="Enter Hours">
+            </div>
+            <div class="base-button text-right"><button type="button">Save</button></div>
+            <div class="base-divider"></div>
+            <div class="Messages-area">
+                <h3 class="text-green mb-5">Messages</h3>
+                <ul class="pl-0">
+                    <li class="Message-item flex">
+                        <div class="Image mr-4"><img src="assets/icons/thumb-1.jpg" alt="Person 1"></div>
+                        <div class="Text">
+                            <h4 class="text-green mt-0 mb-1">Chris Webber</h4>
+                            <p class="text-gray my-0 text-sm">Hi Micheal! How are you?</p>
+                        </div>
+                    </li>
+                    <li class="Message-item flex">
+                        <div class="Image mr-4">
+                            <img src="assets/icons/thumb-2.jpg" alt="" srcset="">
+                        </div>
+                        <div class="Text">
+                            <h4 class="text-green mt-0 mb-1">Kelvin Durant</h4>
+                            <p class="text-gray my-0 text-sm">Do you need that design?</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
