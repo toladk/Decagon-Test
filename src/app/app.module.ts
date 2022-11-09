@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.modules';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

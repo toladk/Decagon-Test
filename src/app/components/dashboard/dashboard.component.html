@@ -7,7 +7,8 @@
                 <div class="flex items-center justify-between mb-5">
                     <div class="flex items-center">
                         <div class="stats-icon text-center mr-2 ">
-                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                            <!-- <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset=""> -->
+                            <fa-icon [icon]="faStar"></fa-icon>
                         </div>
                         <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
                     </div>
@@ -23,7 +24,8 @@
                 <div class="flex items-center justify-between mb-5">
                     <div class="flex items-center">
                         <div class="stats-icon text-center mr-2 ">
-                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                            <!-- <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset=""> -->
+                            <fa-icon [icon]="faFileAlt"></fa-icon>
                         </div>
                         <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
                     </div>
@@ -39,7 +41,8 @@
                 <div class="flex items-center justify-between mb-5">
                     <div class="flex items-center">
                         <div class="stats-icon text-center mr-2 ">
-                            <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset="">
+                            <!-- <img class="w-4 h-4 mt-2 ml-2" src="assets/icons/star.ico" alt="" srcset=""> -->
+                            <fa-icon [icon]="faClipboard"></fa-icon>
                         </div>
                         <p class="text-gray my-0 font-medium text-lg">Task Completed</p>
                     </div>
@@ -263,10 +266,10 @@
             <div class="base-divider"></div>
             <div class="input-date-picker w-full mb-6">
                 <p class="title">Time To Complete</p>
-                <input type="date">
+                <input type="date" style="width: 100%;">
             </div>
             <div class="input-date-picker w-full mb-6">
-                <p class="title">End Date</p><input type="date">
+                <p class="title">End Date</p><input type="date" style="width: 100%;">
             </div>
             <div class="base-divider"></div>
             <div class="input-field mb-6 w-full">

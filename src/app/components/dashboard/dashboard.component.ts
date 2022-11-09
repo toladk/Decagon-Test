@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCoffee, faStar, faFileAlt, faClapperboard, faClipboard } from '@fortawesome/free-solid-svg-icons';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -32,6 +33,10 @@ export type ChartOptions = {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  faStar = faStar
+  faFileAlt = faFileAlt
+  faClipboard = faClipboard
 
   public chartOptions: Partial<ChartOptions> | any;
 
